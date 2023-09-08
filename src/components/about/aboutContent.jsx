@@ -67,7 +67,6 @@ function AboutContent() {
             <Textarea placeholder="Type your message here.." />
           </FormControl>
           <Button
-            colorScheme="blackAlpha"
             style={{ marginTop: "20px", width: "100%" }}
           >
             Submit

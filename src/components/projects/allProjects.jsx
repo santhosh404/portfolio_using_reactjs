@@ -25,7 +25,7 @@ export default function AllProjects() {
   const stylesheet = {
     border: "1px solid #00acee",
     borderRadius: "15px",
-    backgroundColor: isClickAll ? "#00acee" : "#fff",
+    backgroundColor: isClickAll && "#00acee",
     color: isClickAll ? "#fff" : "#00acee",
     marginRight: "3px",
     padding: "2px 4px",
@@ -34,7 +34,7 @@ export default function AllProjects() {
   const stylesheet1 = {
     border: "1px solid #00acee",
     borderRadius: "15px",
-    backgroundColor: isClickPython ? "#00acee" : "#fff",
+    backgroundColor: isClickPython && "#00acee",
     color: isClickPython ? "#fff" : "#00acee",
     marginRight: "3px",
     padding: "2px 4px",
@@ -43,7 +43,7 @@ export default function AllProjects() {
   const stylesheet2 = {
     border: "1px solid #00acee",
     borderRadius: "15px",
-    backgroundColor: isClickHtml ? "#00acee" : "#fff",
+    backgroundColor: isClickHtml && "#00acee",
     color: isClickHtml ? "#fff" : "#00acee",
     marginRight: "3px",
     padding: "2px 4px",
@@ -52,7 +52,7 @@ export default function AllProjects() {
   const stylesheet3 = {
     border: "1px solid #00acee",
     borderRadius: "15px",
-    backgroundColor: isClickReact ? "#00acee" : "#fff",
+    backgroundColor: isClickReact && "#00acee",
     color: isClickReact ? "#fff" : "#00acee",
     marginRight: "3px",
     padding: "2px 4px",

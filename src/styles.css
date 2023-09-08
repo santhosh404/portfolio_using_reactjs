@@ -5,8 +5,6 @@ body {
   text-align: center;
 }
 .navbar {
-  background-color: white;
-  color: black;
   padding: 10px;
 }
 .solid-nav {
@@ -50,14 +48,16 @@ body {
   display: block;
   height: 450px;
   width: 450px;
-  margin-left: 130px;
   margin-top: 20px;
 }
 .header-content {
-  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
   text-align: justify;
-  margin: 90px 200px;
 }
+
 .Content-grid {
   animation: fadeInAnimation ease 4s;
   animation-iteration-count: 1;
@@ -109,7 +109,6 @@ body {
 }
 .Footer {
   margin-top: 150px;
-  background-color: #e5e5e5;
   height: 90px;
 }
 .footer-icons {

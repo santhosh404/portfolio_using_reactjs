@@ -1,31 +1,48 @@
 import React from "react";
 import Sit from "../../assets/download.png";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Stack, Badge, Grid, GridItem } from "@chakra-ui/react";
+
+const badgeStyle = {
+  borderRadius: "10px",
+  padding: "3px 8px",
+  textTransform: "capitalize",
+  fontSize: "12px",
+};
+
+const flex = {
+  display: "flex",
+  justifyContent: "space-evenly"
+}
+
 
 function Header() {
   return (
     <div className="header">
-      <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-        <GridItem w="100%" h="10" className="Content-grid">
+     
+          <div style={flex}>
           <div className="header-content">
-            <h1 className="name">Ethan Jones.</h1>
+            <h1 className="name">Santhosh Annamalai.</h1>
 
-            <p style={{ fontSize: "20px" }}>
-              Hello, my name is Ethan Jones. I am Web Developer and Programmer.
+            <p className="description">
+            Hello! I'm Santhosh, a MERN / Front-End Developer passionate about creating user-friendly web applications. I specialize in React.js, UI/UX design integration, state management, and API integration. With a focus on clean and scalable code, I thrive on solving complex challenges. Let's connect and explore opportunities in web development!
+            <span style={{color:"#00acee", textDecoration: "underline"}}> #FrontEndDeveloper</span> <span style={{color:"#00acee", textDecoration: "underline"}}> #MERNStack</span> <span style={{color:"#00acee", textDecoration: "underline"}}> #ReactJS</span> <span style={{color:"#00acee", textDecoration: "underline"}}> #WebDev</span>
             </p>
-
-            <ul className="skills-ul">
-              <li>Web Development</li>
-              <li>Problem Solving</li>
-              <li>Programming</li>
-              <li>Front-End</li>
-            </ul>
+            <Stack direction="row" mt={5}>
+              <Badge colorScheme="blue" variant="subtle" style={badgeStyle}>
+                Front-End / Backend
+              </Badge>
+              <Badge colorScheme="green" variant="subtle" style={badgeStyle}>
+                MERN Stack Developer
+              </Badge>
+              <Badge colorScheme="blue" variant="subtle" style={badgeStyle}>
+                Problem Solving
+              </Badge>
+            </Stack>
           </div>
-        </GridItem>
-        <GridItem w="100%" h="10">
           <img src={Sit} alt="" className="headerImage" />
-        </GridItem>
-      </Grid>
+
+          </div>
+
     </div>
   );
 }

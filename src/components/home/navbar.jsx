@@ -5,12 +5,15 @@ import {
   Box,
   Heading,
   Container,
+  Button,
+  useColorMode,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-
-import Resume from "../../assets/Santhosh_Annamalai_Resume.pdf";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import Resume from "../../assets/SanthoshResume.pdf";
 
 function Navbar(props) {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div>
       <div className="navbar">
@@ -21,7 +24,19 @@ function Navbar(props) {
                 Portfolio
               </Heading>
             </Box>
+            {colorMode === "light" ? (
+              <MoonIcon
+                style={{ cursor: "pointer", fontSize: "20px", marginLeft: "10px" }}
+                onClick={toggleColorMode}
+              />
+            ) : (
+              <SunIcon
+                style={{ cursor: "pointer", fontSize: "20px", marginLeft: "10px" }}
+                onClick={toggleColorMode}
+              />
+            )}
             <Spacer />
+
             {props.page === "home" ? (
               <div gap="2" className="links">
                 <Link
@@ -29,9 +44,8 @@ function Navbar(props) {
                   className="link1"
                   style={{
                     textDecoration: "underline",
-                    color: "black",
                     textDecorationColor: "#00acee",
-                    textDecorationThickness: "8px"
+                    textDecorationThickness: "8px",
                   }}
                 >
                   Home
@@ -42,6 +56,7 @@ function Navbar(props) {
                 <Link to="/about" className="link3">
                   About me
                 </Link>
+
                 <a
                   href={Resume}
                   download="MyExampleDoc"
@@ -61,9 +76,8 @@ function Navbar(props) {
                   className="link2"
                   style={{
                     textDecoration: "underline",
-                    color: "black",
                     textDecorationColor: "#00acee",
-                    textDecorationThickness: "8px"
+                    textDecorationThickness: "8px",
                   }}
                 >
                   Projects
@@ -93,9 +107,8 @@ function Navbar(props) {
                   className="link3"
                   style={{
                     textDecoration: "underline",
-                    color: "black",
                     textDecorationColor: "#00acee",
-                    textDecorationThickness: "8px"
+                    textDecorationThickness: "8px",
                   }}
                 >
                   About me
@@ -110,6 +123,7 @@ function Navbar(props) {
                 </a>
               </div>
             ) : null}
+           
           </Flex>
         </Container>
       </div>
