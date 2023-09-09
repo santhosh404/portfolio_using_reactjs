@@ -6,8 +6,7 @@ import { FormControl, FormLabel, Input, Textarea } from "@chakra-ui/react";
 function AboutContent() {
   return (
     <div className="wholeAbout">
-      <SimpleGrid columns={2} spacing={1}>
-        <Box className="Content-grid">
+      <div style={{display: 'flex', flexDirection: 'column'}}>
           <div className="about-content">
             <h3 className="aboutsubHeading">
               Designing - Developing - Problem Solving
@@ -26,11 +25,8 @@ function AboutContent() {
               appsFreedom India Private Limited as a Software Developer Intern.
             </p>
           </div>
-        </Box>
-        <Box height="80px" className="content-grid">
           <img src={about} alt="" className="aboutImage" />
-        </Box>
-      </SimpleGrid>
+      </div>
 
       <Box className="Content-grid">
         <div className="quote">

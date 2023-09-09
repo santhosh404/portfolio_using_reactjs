@@ -217,3 +217,31 @@ body {
   width: 50%;
   margin: auto;
 }
+
+
+@keyframes blink {
+  0%, 100% {
+    border-right: 1px solid transparent; 
+  }
+  50% {
+    border-right: 1px solid ; 
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 87%;
+  }
+}
+
+
+.head {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 87%;
+  border-right: 1px solid transparent;
+  animation: typing 4s steps(30, end), blink 1s step-end infinite;
+}

@@ -26,14 +26,16 @@ function Navbar(props) {
             </Box>
             {colorMode === "light" ? (
               <MoonIcon
-                style={{ cursor: "pointer", fontSize: "20px", marginLeft: "10px" }}
-                onClick={toggleColorMode}
-              />
+              style={{ cursor: "pointer", fontSize: "20px", marginLeft: "10px" }}
+              onClick={toggleColorMode}
+            />
             ) : (
               <SunIcon
-                style={{ cursor: "pointer", fontSize: "20px", marginLeft: "10px" }}
-                onClick={toggleColorMode}
-              />
+              style={{ cursor: "pointer", fontSize: "20px", marginLeft: "10px" }}
+              onClick={toggleColorMode}
+            />
+            
+              
             )}
             <Spacer />
 

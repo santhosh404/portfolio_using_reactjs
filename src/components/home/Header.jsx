@@ -21,7 +21,7 @@ function Header() {
      
           <div style={flex}>
           <div className="header-content">
-            <h1 className="name">Santhosh Annamalai.</h1>
+            <h1 className="name head">Santhosh Annamalai.</h1>
 
             <p className="description">
             Hello! I'm Santhosh, a MERN / Front-End Developer passionate about creating user-friendly web applications. I specialize in React.js, UI/UX design integration, state management, and API integration. With a focus on clean and scalable code, I thrive on solving complex challenges. Let's connect and explore opportunities in web development!
