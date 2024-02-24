@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Shrikhand&family=Pacifico&family=Titan+One&family=Rancho&family=Fredoka+One&family=Rubik+Glitch&family=Rubik+Wet+Paint&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: "DM Sans", sans-serif !important;
   text-align: center;
@@ -110,6 +114,7 @@ body {
 .Footer {
   margin-top: 150px;
   height: 90px;
+
 }
 .footer-icons {
   padding-top: 10px;
@@ -216,6 +221,14 @@ body {
   margin-top: 150px !important;
   width: 50%;
   margin: auto;
+}
+
+.projectDescription {
+  margin-top: 20px;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
 }
 
 

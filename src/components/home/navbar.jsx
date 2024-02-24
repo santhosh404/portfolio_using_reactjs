@@ -52,12 +52,10 @@ function Navbar(props) {
                 >
                   Home
                 </Link>
-                <Link to="/projects" className="link2">
-                  Projects
+                <Link to="/experience" className="link2">
+                  Experience
                 </Link>
-                <Link to="/about" className="link3">
-                  About me
-                </Link>
+             
 
                 <a
                   href={Resume}
@@ -74,7 +72,7 @@ function Navbar(props) {
                   Home
                 </Link>
                 <Link
-                  to="/projects"
+                  to="/experience"
                   className="link2"
                   style={{
                     textDecoration: "underline",
@@ -82,11 +80,9 @@ function Navbar(props) {
                     textDecorationThickness: "8px",
                   }}
                 >
-                  Projects
+                  Experience
                 </Link>
-                <Link to="/about" className="link3">
-                  About me
-                </Link>
+               
                 <a
                   href={Resume}
                   download="MyExampleDoc"
@@ -101,20 +97,10 @@ function Navbar(props) {
                 <Link to="/" className="link1">
                   Home
                 </Link>
-                <Link to="/projects" className="link2">
-                  Projects
+                <Link to="/experience" className="link2">
+                  Experience
                 </Link>
-                <Link
-                  to="/about"
-                  className="link3"
-                  style={{
-                    textDecoration: "underline",
-                    textDecorationColor: "#00acee",
-                    textDecorationThickness: "8px",
-                  }}
-                >
-                  About me
-                </Link>
+               
                 <a
                   href={Resume}
                   download="MyExampleDoc"

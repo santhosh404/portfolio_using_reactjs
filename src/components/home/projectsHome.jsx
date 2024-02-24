@@ -5,7 +5,7 @@ import {
   Container,
   Box,
   Image,
-  Badge,
+  Tooltip,
   Button
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -45,11 +45,7 @@ function HomeProjects() {
                     spacing="4"
                     isLoaded={Loaded}
                   >
-                    <Box display="flex" alignItems="baseline">
-                      <Badge borderRadius="full" px="2" colorScheme="twitter">
-                        New
-                      </Badge>
-                    </Box>
+
 
                     <Box
                       mt="1"
@@ -57,20 +53,19 @@ function HomeProjects() {
                       as="h4"
                       lineHeight="tight"
                       noOfLines={1}
+                      className="text-xl"
                     >
                       {project.title}
                     </Box>
 
-                    <Box>
-                      {project.description}
-                      <Box as="span" color="gray.600" fontSize="sm"></Box>
+                    <Box className="text-justify projectDescription">
+                      <Tooltip label={project.description} placement="left">
+                        {project.description}
+
+                      </Tooltip>
                     </Box>
 
-                    <Box display="flex" mt="2" alignItems="center">
-                      <Box as="span" ml="auto" color="gray.600" fontSize="sm">
-                        {project.noOfDays}
-                      </Box>
-                    </Box>
+
                   </SkeletonText>
 
                   <Skeleton
@@ -79,7 +74,11 @@ function HomeProjects() {
                     borderRadius="lg"
                     isLoaded={Loaded}
                   >
-                    {project.title === "Notes App using React JS" ? (
+                    <a
+                      href={ project.accessUrl }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <Button
                         rightIcon={<ArrowForwardIcon />}
                         colorScheme="twitter"
@@ -91,43 +90,7 @@ function HomeProjects() {
                       >
                         View Project
                       </Button>
-                    ) : project.title === "Movie Suggester webapp" ? (
-                      <a
-                        href="https://github.com/santhosh404/Movie-Suggester"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Button
-                          rightIcon={<ArrowForwardIcon />}
-                          colorScheme="twitter"
-                          variant="outline"
-                          width="100%"
-                          mt="2"
-                          mb="4"
-                          style={{ fontWeight: "initial" }}
-                        >
-                          View Project
-                        </Button>
-                      </a>
-                    ) : project.title === "Quiz webapp" ? (
-                      <a
-                        href="https://github.com/santhosh404/Quizapp-Django"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Button
-                          rightIcon={<ArrowForwardIcon />}
-                          colorScheme="twitter"
-                          variant="outline"
-                          width="100%"
-                          mt="2"
-                          mb="4"
-                          style={{ fontWeight: "initial" }}
-                        >
-                          View Project
-                        </Button>
-                      </a>
-                    ) : null}
+                    </a>
                   </Skeleton>
                 </Box>
               </Box>

@@ -26,9 +26,7 @@ export default function Home(props) {
       <Navbar page={props.page} />
       <Header />
       <h1 style={projects}>Projects</h1>
-      <Link to="/projects" className="viewProjects">
-        View all projects
-      </Link>
+      
       <HomeProjects />
       <h1 style={skills}>Skills</h1>
       <Skills />
